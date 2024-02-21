@@ -1,0 +1,808 @@
+.main {
+    -fx-background-color: -primary-color;
+    -fx-padding: 8; /* skal være <= 5 p.t., mere end 5 gør at horizontal paginator vibrerer på resize af vindue */
+}
+
+.topbar {
+    -fx-background-radius: 5;
+    -fx-background-color: -topbar-color;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.sidebar {
+    -fx-background-radius: 5;
+    -fx-background-color: -sidebar-color;
+    -fx-padding: 2 10 0 0;
+    -fx-spacing: 10;
+}
+
+.icon {
+    -fx-fill: -icon-color;
+    -fx-font-size: 20;
+}
+
+.menu-icon {
+    -fx-fill: -icon-color;
+    -fx-font-size: 20;
+    -fx-cursor: hand;
+}
+
+.menu-icon:hover {
+    -fx-fill: white;
+}
+
+.add-icon {
+    -fx-fill: -icon-color;
+    -fx-font-size: 20;
+    -fx-cursor: hand;
+}
+
+.add-icon:hover {
+    -fx-fill: white;
+}
+
+
+.logo {
+    -fx-text-fill: -accent-color;
+    -fx-font-size: 20;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.nav-button .font-icon {
+    -fx-fill: -icon-color;
+    -fx-font-size: 24;
+}
+
+.nav-button .label {
+    -fx-text-fill: -icon-color;
+    -fx-font-size: 16;
+}
+
+.nav-button .indicator {
+    -fx-background-radius: 5;
+    -fx-background-color: -accent-color;
+}
+
+.nav-button:active:hover .indicator {
+    -fx-background-color: white;
+}
+
+.nav-button:hover .label,
+.nav-button:hover .font-icon,
+.nav-button:active:hover .label,
+.nav-button:active:hover .font-icon {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+.nav-button:active .label,
+.nav-button:active .font-icon,
+.nav-button:active .indicator {
+    -fx-text-fill: -accent-color;
+    -fx-fill: -accent-color;
+}
+
+.movie-poster {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.movie-poster-delete-icon,
+.movie-poster-edit-icon {
+    -fx-font-size: 24;
+    -fx-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.movie-poster-delete-icon:hover {
+    -fx-fill: red;
+}
+
+.movie-poster-edit-icon:hover {
+    -fx-fill: -accent-color;
+}
+
+.movie-poster-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.movie-poster-subtitle {
+    -fx-text-fill: derive(white, -40%);
+    -fx-font-weight: bold;
+}
+
+.movie-poster-title:hover {
+    -fx-text-fill: -accent-color;
+    -fx-cursor: hand;
+}
+
+.movie-poster-imdb-icon {
+    -fx-fill: #dba506;
+    -fx-font-size: 20;
+}
+
+.poster-play-button {
+    -fx-font-size: 50;
+    -fx-fill: white;
+}
+
+.poster-play-button:hover {
+    -fx-fill: -accent-color;
+}
+
+
+.hpage-nav {
+    -fx-font-size: 24;
+    -fx-fill: lightgrey;
+    -fx-cursor: hand;
+}
+
+.hpage-nav:hover {
+    -fx-fill: white;
+}
+
+.hpage-title {
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.hpage-scroll-pane {
+    -fx-background-color: -primary-color;
+    -fx-background: -primary-color;
+}
+
+.hpage-scroll-pane .viewport {
+    -fx-background-color: -primary-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Login                                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.login-label {
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.login-link {
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-underline: false;
+}
+
+.login-link:hover {
+    -fx-text-fill: -accent-color;
+}
+
+.login-button {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: derive(-accent-color, +20%);
+}
+
+.login-text {
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+}
+
+.login-field {
+    -fx-border-color: white;
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-border-radius: 4;
+}
+
+.login-field:focused {
+    -fx-border-color: -accent-color;
+}
+
+.login-title {
+    -fx-font-size: 24;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Dialog                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.dialog-pane {
+    -fx-background-color: -primary-color;
+    -fx-padding: 0;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: red;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: -sidebar-color;
+}
+
+.dialog-pane .button-bar .ok-button {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: -accent-color;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button-bar .cancel-button {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: darkgray;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button-bar .ok-button:hover {
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button-bar .cancel-button:hover {
+    -fx-text-fill: white;
+}
+
+
+.add-repick {
+    -fx-text-fill: -accent-color;
+}
+
+.add-repick:hover {
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.add-imdb-icon {
+    -fx-font-size: 30;
+    -fx-fill: #dba506;
+}
+
+.delete-icon {
+    -fx-cursor: hand;
+}
+
+.delete-icon:hover {
+    -fx-fill: red;
+}
+
+.add-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 30;
+}
+
+.add-back-button {
+    -fx-background-color: derive(-primary-color, -40%);
+    -fx-text-fill: grey;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-pref-width: 80;
+    -fx-cursor: hand;
+    /*-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);*/
+}
+
+.add-back-button:hover {
+    -fx-background-color: derive(-primary-color, -60%);
+    -fx-text-fill: white;
+}
+
+.add-poster {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.add-textfield {
+
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Playback                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.playback {
+    -fx-background-color: black;
+}
+
+.playback-top, .playback-bottom {
+    -fx-background-color: transparent;
+}
+
+.playback-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-time {
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-back-icon {
+    -fx-fill: white;
+    -fx-font-size: 30;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-back-icon:hover {
+    -fx-fill: -accent-color;
+}
+
+.playback-slider {
+    -unused-track-color: -primary-color;
+    -used-track-color: white;
+    -used-track-color-hover: -accent-color;
+    -thumb-color: white;
+    -thumb-radius: 8;
+    -track-height: 6;
+    -slider-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.volume-slider {
+    -unused-track-color: -primary-color;
+    -used-track-color: white;
+    -used-track-color-hover: -accent-color;
+    -thumb-color: white;
+    -thumb-radius: 6;
+    -track-height: 4;
+    -slider-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-progress-indicator {
+    -fx-progress-color: -accent-color;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-volume-icon {
+    -fx-fill: white;
+    -fx-cursor: hand;
+    -fx-font-size: 24;
+}
+
+.playback-volume-icon:hover {
+    -fx-fill: -accent-color;
+}
+
+.playback-playpause-icon {
+    -fx-fill: white;
+    -fx-cursor: hand;
+    -fx-font-size: 30;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-playpause-icon:hover {
+    -fx-fill: -accent-color;
+}
+
+.playback-local-icon {
+    -fx-fill: white;
+    -fx-cursor: hand;
+    -fx-font-size: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-local-icon:hover {
+    -fx-fill: -accent-color;
+}
+
+
+.playback-fullscreen-icon {
+    -fx-fill: white;
+    -fx-cursor: hand;
+    -fx-font-size: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.playback-fullscreen-icon:hover {
+    -fx-fill: -accent-color;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Info Page                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+.info-header {
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-font-size: 32;
+    -fx-font-weight: bold;
+}
+
+.info-director {
+    -fx-fill: grey;
+    -fx-text-fill: grey;
+    -fx-font-size: 12;
+}
+
+.info-directored {
+    -fx-fill: grey;
+    -fx-text-fill: grey;
+    -fx-font-size: 12;
+}
+
+.info-others {
+    -fx-fill: lightgrey;
+    -fx-text-fill: lightgrey;
+    -fx-font-size: 14;
+}
+
+.info-genre {
+    -fx-fill: lightgrey;
+    -fx-text-fill: lightgrey;
+    -fx-font-size: 14;
+}
+
+.info-description {
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+}
+
+.info-play {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+    -fx-pref-width: 100;
+    -fx-cursor: hand;
+}
+
+.info-play:hover {
+    -fx-background-color: derive(-accent-color, -25%);
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+}
+
+.info-buttons {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border: none;
+    -fx-fill: white;
+    -fx-font-size: 30;
+    -fx-cursor: hand;
+}
+
+.info-cast-name {
+    -fx-fill: rgb(175, 175, 175);
+    -fx-font-size: 14;
+}
+
+.info-name {
+    -fx-fill: rgb(225, 225, 225);
+    -fx-font-size: 14;
+}
+
+.info-name:hover, .info-header:hover, .info-director:hover, .info-genre:hover {
+    -fx-underline: true;
+    -fx-cursor: hand;
+    -fx-fill: white;
+}
+
+.info-circle {
+    -fx-fill: rgba(255, 255, 255, 0.25);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.info-circle-txt {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+    -fx-fill: rgba(255, 255, 255, 0.5);
+}
+
+.info-tooltip {
+    -fx-fill: rgb(225, 225, 225);
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
+}
+
+.info-youtube-icon {
+    -fx-font-size: 60;
+    -fx-fill: #FF0000;
+}
+
+.info-youtube-title {
+    -fx-font-size: 12;
+    -fx-text-fill: rgb(175, 175, 175);
+    -fx-font-weight: bold;
+}
+
+.info-youtube-type {
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.info-external-links {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 15, 0, 0, 0);
+    -fx-padding: 20, 0, 20, 0;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-background-color: -sidebar-color;
+    -fx-border-color: -sidebar-color;
+}
+
+.info-external-links:hover {
+    -fx-padding: 20, 0, 20, 0;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: -accent-color;
+    -fx-cursor: hand;
+}
+
+.info-imdb-rating {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.info-imdb-rating:hover {
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.info-rating-star {
+    -fx-font-size: 15;
+    -fx-fill: grey
+}
+
+.info-rating-star-hover {
+    -fx-font-size: 15;
+    -fx-fill: lightgrey;
+    -fx-cursor: hand;
+}
+
+.info-poster {
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Genre page & Category page                                                  *
+ *                                                                             *
+ ******************************************************************************/
+.genre-category-button {
+    -fx-padding: 50, 0, 50, 0;
+    -fx-min-width: 300;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-radius: 4;
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-border-color: rgba(255, 255, 255, 0.25); /* Skal tilføjes ellers "hopper" den */
+}
+
+.genre-category-button:hover {
+    -fx-background-color: -primary-color;
+    -fx-border-color: -accent-color;
+    -fx-cursor: hand;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-pane {
+    -fx-background-color: -primary-color;
+    -fx-background: -primary-color;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: -primary-color;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: derive(-primary-color, +20%);
+}
+
+.scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button,
+.scroll-pane .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Filtering                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+.filter-genre-selected {
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+}
+
+.filter-genre-remove {
+    -fx-font-size: 16;
+    -fx-fill: white;
+    -fx-cursor: hand;
+}
+
+.filter-genre-remove:hover {
+    -fx-fill: -accent-color;
+}
+
+.icon-textfield {
+    -fx-padding: 5 5 5 25;
+    -fx-background-color: -primary-color;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+}
+
+.imdb-textfield {
+    -fx-background-radius: 5;
+}
+
+.icon-textfield:focused {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.icon-textfield-icon {
+    -fx-font-size: 20;
+}
+
+.imdb-icon {
+    -fx-fill: #dba506;
+    -fx-font-size: 20;
+}
+
+
+.search-icon {
+    -fx-fill: white;
+}
+
+.icon-textfield-action {
+    -fx-font-size: 20;
+    -fx-fill: black;
+    -fx-cursor: hand;
+}
+
+.icon-textfield-action:hover {
+    -fx-fill: -accent-color;
+}
+
+.context-menu {
+    -fx-background-color: -primary-color;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.context-menu .menu-item {
+    -fx-background-color: -primary-color;
+    -fx-cursor: hand;
+}
+
+.context-menu .menu-item .label {
+    -fx-text-fill: white;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: derive(-primary-color, -20%);
+}
+
+.menu-item-title {
+    -fx-font-weight: bold;
+}
+
+.menu-poster {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.menu-setting-enabled-icon {
+    -fx-fill: -accent-color;
+    -fx-font-size: 16;
+}
+
+.combo-box {
+    -fx-background-color: -primary-color;
+    -fx-cursor: hand;
+}
+
+.combo-box .list-view {
+    -fx-background-color: -primary-color;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: derive(-primary-color, -20%);
+}
+
+.combo-box .scroll-bar:vertical, .combo-box .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.combo-box .scroll-bar .thumb {
+    -fx-background-color: derive(-primary-color, +20%);
+}
+.combo-box .scroll-bar:vertical .increment-button,
+.combo-box .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: -primary-color;
+}
+
+.combo-box .arrow {
+    -fx-background-color: derive(-primary-color, +20%);
+}
+
+.combo-box:focused .arrow {
+    -fx-background-color: -accent-color;
+}
+
+.combo-box .list-cell .check-box .box {
+    -fx-background-color: -primary-color;
+}
+
+.combo-box .check-box .mark {
+    -fx-mark-color: -accent-color;
+    -fx-background-insets: 0;
+}
+
+
+.button-filter-imdb {
+    -fx-min-width: 125;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 5, 0, 0, 0);
+    -fx-font-size: 12;
+    -fx-text-fill: grey;
+    -fx-border-radius: 4;
+    -fx-background-color: -primary-color;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-filter-imdb:hover {
+    -fx-text-fill: white;
+    -fx-border-radius: 4;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+}
+
