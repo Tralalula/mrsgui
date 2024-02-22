@@ -24,13 +24,13 @@ public class ViewHandler {
     }
 
     public void changeView(ViewType newView) {
-        if (model.activeViewProperty().get() == ViewType.LOGIN && newView == ViewType.HOME) {
-            animateTransitionFromLoginToHome();
-
-        }
+//        if (model.activeViewProperty().get() == ViewType.LOGIN && newView == ViewType.HOME) {
+//            animateTransitionFromLoginToHome();
+//
+//        }
 
         model.previousViewProperty().set(model.activeViewProperty().get());
-//        model.activeViewProperty().set(newView);
+        model.activeViewProperty().set(newView);
     }
 
     public void previousView() {

@@ -66,7 +66,7 @@ public class HomeViewBuilder implements Builder<Region> {
         return new HorizontalPaginator<>(
                 model.getObsTopMovieSeen(),
                 movie -> createMoviePoster(movie.getTitle()),
-                "Top Movie Seen"
+                "Top Movies Seen"
         );
     }
 
@@ -74,7 +74,7 @@ public class HomeViewBuilder implements Builder<Region> {
         return new HorizontalPaginator<>(
                 model.getObsTopMovieNotSeen(),
                 movie -> createMoviePoster(movie.getTitle()),
-                "Top Movie Not Seen"
+                "Top Movies Not Seen"
         );
     }
 
