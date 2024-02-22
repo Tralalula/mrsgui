@@ -19,7 +19,7 @@ public class MoviePoster extends StackPane {
         border.setArcWidth(rounding);
         border.setArcHeight(rounding);
         border.setFill(new Color(0, 0, 0, 0.5));
-        border.setStroke(new Color(0.85, 0.57, 0.05, 1.0));
+        border.getStyleClass().add("movie-poster-border");
         border.setStrokeWidth(1);
         border.setVisible(false);
 

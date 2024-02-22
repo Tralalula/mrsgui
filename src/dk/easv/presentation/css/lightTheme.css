@@ -1,9 +1,13 @@
 .root {
-    -primary-color: #fff;
-    -accent-color: #E5A10C;
+    -primary-color: #FFF;
+    -accent-color: firebrick;
 
-    -sidebar-color: derive(-primary-color, -20%);
-    -topbar-color: derive(-primary-color, -80%);
+    -sidebar-color: #F0F0F0;
+    -topbar-color: #E5E5E5;
 
-    -icon-color: grey;
+    -primary-text-color: black;
+    -secondary-text-color: #606060;
+    -tertiary-text-color: #A0A0A0;
+    -primary-text-color-contrast: white;
+    -play-button-color: white;
 }

@@ -66,8 +66,8 @@ public class HorizontalPaginator<T> extends VBox {
         HBox results = new HBox(itemSpacing);
 
         results.setAlignment(Pos.CENTER_LEFT);
-        results.setStyle("-fx-background-color: #323232");
-        results.setPadding(new Insets(10, 0, 10, 5));
+
+        results.getStyleClass().add("hpage-content");
 
         return results;
     }
@@ -79,7 +79,6 @@ public class HorizontalPaginator<T> extends VBox {
         results.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         results.setFitToHeight(true);
         results.setFitToWidth(true);
-//        scrollPane.getStyleClass().add("hpage-scroll-pane");
         results.setStyle("-fx-background-color: transparent"); // bruges til at fjerne border på ScrollPane åbenbart
         results.setPadding(new Insets(0, 5, 0, 5));
 

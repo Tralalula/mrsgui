@@ -10,6 +10,7 @@ import dk.easv.presentation.widgets.ScrollPaneWidgets;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
@@ -43,7 +44,8 @@ public class HomeViewBuilder implements Builder<Region> {
         model.getObsTopMoviesSimilarUsers().addListener((ListChangeListener<TopMovie>) change -> updateTopFromSimilar());
 
         vbox.getChildren().addAll(topAvgNotSeen, topFromSimilar, topMovieSeen);
-        vbox.setStyle("-fx-background-color: #323232");
+        vbox.getStyleClass().add("home-content");
+        vbox.setPadding(new Insets(-16, 0, 0, 0));
 
         return ScrollPaneWidgets.defaultPageScrollPane(vbox);
     }

@@ -43,9 +43,15 @@ public class AppViewBuilder implements Builder<Region> {
 
         main.getStyleClass().add("main");
 
-        main.setCenter(createContent());
-        main.setTop(createTop());
-        main.setLeft(createLeft());
+        Region top = createTop();
+        Region left = createLeft();
+        Region center = createContent();
+
+        main.setTop(top);
+        main.setLeft(left);
+        main.setCenter(center);
+
+        BorderPane.setMargin(top, new Insets(0, 0, 8, 0));
 
         Platform.runLater(mrs::requestFocus);
 

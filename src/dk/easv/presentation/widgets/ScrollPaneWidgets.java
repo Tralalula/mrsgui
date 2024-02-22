@@ -19,7 +19,7 @@ public class ScrollPaneWidgets {
         scrollPane.setFitToWidth(true);
         scrollPane.setMaxHeight(Region.USE_COMPUTED_SIZE);
         scrollPane.getStyleClass().add("scroll-pane");
-        value.setStyle("-fx-background-color: #323232");
+        value.getStyleClass().add("-scroll-pane-content");
 
         return scrollPane;
     }

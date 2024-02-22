@@ -26,11 +26,7 @@ public class ViewHandler {
     public void changeView(ViewType newView) {
         if (model.activeViewProperty().get() == ViewType.LOGIN && newView == ViewType.HOME) {
             animateTransitionFromLoginToHome();
-//            try {
-//                Thread.sleep(2000);
-//            } catch (InterruptedException e) {
-//
-//            }
+
         }
 
         model.previousViewProperty().set(model.activeViewProperty().get());

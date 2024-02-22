@@ -43,18 +43,6 @@ public class AppModel {
     }
 
     public void loadData(User user) {
-/*        obsTopMovieSeen.clear();
-        obsTopMovieSeen.addAll(logic.getTopAverageRatedMovies(user).stream().limit(100).toList());
-
-        obsTopMovieNotSeen.clear();
-        obsTopMovieNotSeen.addAll(logic.getTopAverageRatedMoviesUserDidNotSee(user).stream().limit(100).toList());
-
-        obsSimilarUsers.clear();
-        obsSimilarUsers.addAll(logic.getTopSimilarUsers(user).stream().limit(100).toList());
-
-        obsTopMoviesSimilarUsers.clear();
-        obsTopMoviesSimilarUsers.addAll(logic.getTopMoviesFromSimilarPeople(user).stream().limit(100).toList());*/
-
         performBackgroundTask(() -> {
             return logic.getTopAverageRatedMovies(user).stream().limit(100).toList();
         }, result -> {

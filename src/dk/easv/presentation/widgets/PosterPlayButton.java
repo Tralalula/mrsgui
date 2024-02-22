@@ -10,12 +10,12 @@ public class PosterPlayButton extends StackPane {
     public PosterPlayButton(int radius) {
         super();
         FontIcon icon = new FontIcon(Material2MZ.PLAY_CIRCLE_OUTLINE);
-        icon.setIconColor(Color.WHITE);
+        icon.getStyleClass().add("poster-play-button");
         icon.setIconSize(radius);
 
         FontIcon iconHovered = new FontIcon(Material2MZ.PLAY_CIRCLE_FILLED);
-        iconHovered.setIconColor(new Color(0.85, 0.57, 0.05, 1.0));
         iconHovered.setIconSize(radius);
+        iconHovered.getStyleClass().add("poster-play-button-hovered");
         iconHovered.setVisible(false);
 
         Circle clip = new Circle(radius / 2.0, radius / 2.0, radius / 2.0);

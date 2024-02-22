@@ -5,5 +5,9 @@
     -sidebar-color: derive(-primary-color, -20%);
     -topbar-color: derive(-primary-color, -80%);
 
-    -icon-color: grey;
+    -primary-text-color: white;
+    -secondary-text-color: grey;
+    -tertiary-text-color: lightgrey;
+    -primary-text-color-contrast: black;
+    -play-button-color: white;
 }

@@ -39,6 +39,7 @@ public class LoginViewBuilder implements Builder<Region> {
         Label usernameLabel = LabelWidgets.styledLabel("Username", "login-label");
         TextField usernameTextField = new TextField();
         usernameTextField.getStyleClass().add("login-field");
+        usernameTextField.setText("Georgi Facello");
         GridPane.setMargin(usernameTextField, new Insets(-10, 0, 0, 0));
         gridPane.add(usernameLabel, 0, 0);
         gridPane.add(usernameTextField, 0, 1);
